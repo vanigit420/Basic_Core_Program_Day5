@@ -4,19 +4,23 @@
     {
         static void Main(string[] args)
         {
-            int year;
-            Console.WriteLine("Enter the Four Digit Number Year : ");
-            year = Convert.ToInt32(Console.ReadLine());
+            int num;
+            Console.WriteLine("Enter the Number : ");
+            num = Convert.ToInt32(Console.ReadLine());
 
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            Console.WriteLine("Factors are : ");
+
+            if (num >= 2)
             {
-                Console.WriteLine("{0} year is Leap Year", year);
+                for (int i = 2; i <= num; i++)
+                {
+                    while (num % i == 0)
+                    {
+                        Console.Write(i + " ");
+                        num = num / i;
+                    }
+                }
             }
-            else
-            {
-                Console.WriteLine("{0} year is not Leap Year", year);
-            }
-            Console.ReadLine();
         }
     }
 }
