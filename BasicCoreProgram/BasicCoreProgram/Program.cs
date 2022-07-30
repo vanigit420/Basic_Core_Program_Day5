@@ -4,19 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the 1st number :");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter any Character to check whether it is Vowel or Constant : ");
+            char ch = Convert.ToChar(Console.ReadLine());
 
-            Console.WriteLine("Enter the 2nd number :");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Before Swap : num1 = " + num1 + " num2 = " + num2);
-
-            num1 = num1 * num2;
-            num2 = num1 / num2;
-            num1 = num1 / num2;
-
-            Console.WriteLine("After Swap : num1 = " + num1 + " num2 = " + num2);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+                ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+            {
+                Console.WriteLine(ch + " is Vowel");
+            }
+            else
+            {
+                Console.WriteLine(ch + " is Constant");
+            }
         }
     }
 }
