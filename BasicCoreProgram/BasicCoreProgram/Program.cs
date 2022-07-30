@@ -4,17 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Dividend : ");
-            int dividend = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Divisor : ");
-            int divisor = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the 1st number :");
+            int num1 = Convert.ToInt32(Console.ReadLine());
 
-            int Quotient = dividend / divisor;
-            int Remainder = dividend % divisor;
+            Console.WriteLine("Enter the 2nd number :");
+            int num2 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Dividend: {0}, Divisor: {1} ", dividend, divisor);
-            Console.WriteLine("Quotient is : " + Quotient);
-            Console.WriteLine("Remainder is : " + Remainder);
+            Console.WriteLine("Before Swap : num1 = " + num1 + " num2 = " + num2);
+
+            num1 = num1 * num2;
+            num2 = num1 / num2;
+            num1 = num1 / num2;
+
+            Console.WriteLine("After Swap : num1 = " + num1 + " num2 = " + num2);
         }
     }
 }
