@@ -4,17 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter any Character to check whether it is Vowel or Constant : ");
-            char ch = Convert.ToChar(Console.ReadLine());
+            int N;
+            Console.WriteLine("Enter the Number : ");
+            N = Convert.ToInt32(Console.ReadLine());
 
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-                ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+            Console.WriteLine("Table of Power of Two : ");
+
+            if (N !=0 && N <= 31)
             {
-                Console.WriteLine(ch + " is Vowel");
-            }
-            else
-            {
-                Console.WriteLine(ch + " is Constant");
+                for (int i = 1; i <= N; i++)
+                {
+                    Console.WriteLine("2^{0} : {1}", i, Math.Pow(2, i));
+                }
             }
         }
     }
